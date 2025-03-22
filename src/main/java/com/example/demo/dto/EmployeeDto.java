@@ -1,9 +1,9 @@
 package com.example.demo.dto;
 
 public class EmployeeDto {
-    int id;
-    String email;
-    String password;
+    private int id;
+    private String email;
+    private String password;
 
     public EmployeeDto(){
 
