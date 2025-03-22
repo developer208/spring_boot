@@ -86,4 +86,9 @@ public class UserService {
         });
         return mapper.map(userRepository.save(userEntity),UserDto.class);
     }
+
+    public Optional<UserDto> getUserById(Long userId) {
+        Optional<UserEntity> user=userRepository.findById(userId);
+                return user.map(user1->mapper.map(user1,UserDto.class));
+    }
 }
